@@ -24,7 +24,7 @@ def run_game():
     # Make a ship
     ship = Ship(ai_settings, screen)
     
-    # Make a alien
+    # Make an alien
     alien = Alien(ai_settings, screen)
     
     # Make a ship, a group of bullets, and a group of aliens.
