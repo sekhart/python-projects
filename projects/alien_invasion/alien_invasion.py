@@ -14,6 +14,8 @@ from pygame.sprite import Group
 
 from game_stats import GameStats
 
+from button import Button
+
 def run_game():
     # Initialize game, settings and create a screen object.
     pygame.init()
@@ -37,15 +39,19 @@ def run_game():
     # Create an instance to store game statistics.
     stats = GameStats(ai_settings)
     
+    # Make the Play button.
+    play_button = Button(ai_settings, screen, "Play")
+        
     # Start the main loop for the game.
     while True:
         # Watch for keyboard and mouse events.
-        gf.check_events(ai_settings, screen, ship, bullets)
+        gf.check_events(ai_settings, screen, stats, ship, aliens, bullets, play_button)
         if stats.game_active:
+            print('stats.game_active')
             bullets.update()
             ship.update()
             gf.update_bullets(ai_settings, screen, ship, aliens, bullets)
             gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
-            gf.update_screen(ai_settings, screen, ship, aliens, bullets)        
+        gf.update_screen(ai_settings, screen, stats, ship, aliens, bullets, play_button)
         
 run_game()
