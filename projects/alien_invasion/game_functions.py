@@ -50,7 +50,7 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
         ship.moving_left = True
     elif event.key == pygame.K_SPACE or event.key == pygame.K_UP:
         # Create a new bullet and add it to the bullets group.
-        fire_bullets(ai_settings, screen, ship, bullets)
+        fire_bullets(ai_settings, screen, ship, bullets)  
     elif event.key == pygame.K_q:
         sys.exit()
       
