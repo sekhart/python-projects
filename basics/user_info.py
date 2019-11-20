@@ -1,7 +1,7 @@
 import json
 
+
 def get_user_name():
-    
     try:
         filename = 'username.json'
         with open(filename, 'r') as f_obj:
@@ -11,15 +11,17 @@ def get_user_name():
     else:
         return username
 
+
 def greet_user():
     username = get_user_name()
     if username:
-        print('Welcome back, '+ username+'!')
+        print('Welcome back, ' + username + '!')
     else:
         username = input('Enter Username: ')
         filename = 'username.json'
         with open(filename, 'w') as fw_obj:
             json.dump(username, fw_obj)
-            print("We'll remember you when you come back, "+username)
+            print("We'll remember you when you come back, " + username)
+
 
 greet_user()

@@ -5,14 +5,14 @@ i = 0
 for alien_number in range(30):
     new_alien = {'color': 'green', 'points': i, 'speed': 'slow'}
     aliens.append(new_alien)
-    i=i+1
+    i = i + 1
 # Show the first 5 aliens:
 for alien in aliens[0:15]:
-        if alien['color'] == 'green':
-            alien['color'] = 'yellow'
-            alien['points'] = i+1
-            alien['speed'] = 'fast'
-        print(alien)
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['points'] = i + 1
+        alien['speed'] = 'fast'
+    print(alien)
 print("...")
 print(aliens)
 # Show how many aliens have been created.
