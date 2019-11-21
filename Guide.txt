@@ -2,3 +2,32 @@ python -m pip install -U matplotlib==3.2.0rc1
 python -m pip install -U pygame
 
 conda install -c cogsci pygame=1.9.2a0
+
+Upgrade pip version:
+python -m pip install --upgrade pip
+
+creating venv:
+python -m venv ll_env
+
+Install Django:
+pip install Django
+
+Activate env:
+
+ll_env\Scripts\activate
+
+create project:
+django-admin.py startproject learning_log .
+
+create db:
+python manage.py migrate
+
+python manage.py makemigrations learning_logs
+
+python manage.py migrate
+
+Whenever we want to modify the data that Learning Log manages,
+we’ll follow these three steps: modify models.py, call makemigrations on
+learning_logs, and tell Django to migrate the project.
+
+python manage.py createsuperuser
