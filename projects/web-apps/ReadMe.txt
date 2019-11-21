@@ -17,4 +17,11 @@ python manage.py startapp learning_logs
 8. Defining Models
 9. Activating App
 add into settings.py file INSTALLED_APPS
-10. 
+10. Modify the DB with new Model
+python manage.py makemigrations learning_logs
+11. Migrate DB
+python manage.py migrate
+12. create super user
+python manage.py createsuperuser
+13. Add data 
+Go to http://localhost:8000/admin/
