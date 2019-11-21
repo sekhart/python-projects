@@ -1,0 +1,4 @@
+python -m pip install -U matplotlib==3.2.0rc1
+python -m pip install -U pygame
+
+conda install -c cogsci pygame=1.9.2a0
